@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class RegistroComponent {
 
+    onSubmit() {
+        alert("Teste, registrar dados após validacao")
+    }
+
 }

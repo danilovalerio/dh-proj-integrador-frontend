@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { LoginComponent } from './login/login.component';
 
+import { FormsModule } from '@angular/forms';
+
 //Necessário importar o módulo de rotas dos componentes dentro de template
 import { RouterModule } from '@angular/router';
 
@@ -24,7 +26,8 @@ import { RouterModule } from '@angular/router';
     ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [NavbarComponent, MainComponent, FooterComponent]
 })

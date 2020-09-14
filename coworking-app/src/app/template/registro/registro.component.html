@@ -1,7 +1,7 @@
 <div class="caixa-login">
     <img src="../../../assets/imgaes/digital-house-logo.png">
-    <div class="forms">
-        <form action="/action_page.php">
+    <div class="forms"  >
+        <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
             <input type="text" name="" placeholder="Nome">
             <input type="text" name="" placeholder="E-mail">
             <select>
