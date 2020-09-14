@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { LoginComponent } from './login/login.component';
 
+//Necessário importar o módulo de rotas dos componentes dentro de template
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     ForgotComponent
     ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [NavbarComponent, MainComponent, FooterComponent]
 })
