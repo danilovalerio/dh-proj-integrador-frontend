@@ -1,3 +1,13 @@
 body {
     padding-top: 56px;
   }
+
+  footer {
+    background-color: #000;
+    color: #F2FFFC;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
