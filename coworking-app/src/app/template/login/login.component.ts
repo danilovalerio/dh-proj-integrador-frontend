@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Usuario } from './usuario';
+import { AuthorizeService } from 'src/app/authorize.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
     loginSuccess: Boolean = false
     errors: String[] = []
 
     //exemplos de uso
-    userEmail: String = ""
-    userPass: String = ""
+    userName: string = ""
+    userPass: string = ""
 
-    ngOnInit(): void {
-    }
+    constructor(
+        private authorizeService: AuthorizeService
+    ){ }
 
     logar(): void {
         //alert("usuário: " + this.userEmail + "\n senha:" + this.userPass);
@@ -23,12 +26,12 @@ export class LoginComponent implements OnInit {
     }
 
     validarTamanho() {
-        console.log(this.userEmail.length)
-        this.errors = []
+        console.log(this.userName.length);
+        this.errors = [];
 
 
-        console.log(this.userEmail.toString().length)
-        if (this.userEmail.length <= 0 || this.userEmail.length == undefined) {
+        console.log(this.userName.toString().length)
+        if (this.userName.length <= 0 || this.userName.length == undefined) {
             this.errors.push("E-mail não pode ser vazio")
         }
 
@@ -36,5 +39,20 @@ export class LoginComponent implements OnInit {
             this.errors.push("Senha não pode ser vazia")
         }
 
+    }
+
+    cadastrar(){
+        const usuario = new Usuario();
+        usuario.username = this.userName;
+        usuario.password = this.userPass;
+        this.authorizeService
+        .salvar(usuario)
+        .subscribe( response => {
+            this.loginSuccess = true;
+            this.errors = [];
+        }, error => {
+            this.errors.push("true");
+            this.loginSuccess = false;
+        });
     }
 }
