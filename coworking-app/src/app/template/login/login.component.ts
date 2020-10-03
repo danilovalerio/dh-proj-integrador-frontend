@@ -15,10 +15,6 @@ export class LoginComponent {
     userName: string = ""
     userPass: string = ""
 
-    constructor(
-        private authorizeService: AuthorizeService
-    ){ }
-
     logar(): void {
         //alert("usuário: " + this.userEmail + "\n senha:" + this.userPass);
         //testa validações no front
@@ -39,20 +35,5 @@ export class LoginComponent {
             this.errors.push("Senha não pode ser vazia")
         }
 
-    }
-
-    cadastrar(){
-        const usuario = new Usuario();
-        usuario.username = this.userName;
-        usuario.password = this.userPass;
-        this.authorizeService
-        .salvar(usuario)
-        .subscribe( response => {
-            this.loginSuccess = true;
-            this.errors = [];
-        }, error => {
-            this.errors.push("true");
-            this.loginSuccess = false;
-        });
     }
 }
