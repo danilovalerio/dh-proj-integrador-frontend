@@ -1,4 +1,5 @@
 <!--TESTE DE LOGIN E CADASTRO NUMA ÚNICA TELA, JUNTAR O REGISTRO AQUI PARA TESTE-->
+
 <div id="layoutAutenticacao">
     <div id="layoutAutenticacao_conteudo">
         <main>
@@ -16,20 +17,19 @@
                             </div>
                             <div class="card-body">
 
-                                <div class="alert alert-success"
-                                *ngIf="mensagemSucesso">
+                                <div class="alert alert-success" *ngIf="mensagemSucesso">
                                     {{mensagemSucesso}}
                                 </div>
 
-                                <div class="alert alert-danger"
-                                *ngIf="loginError">
-                                    Login e/ou senha incorreto(a).
+                                <div class="alert alert-danger" *ngFor="let erro of errors">
+                                    {{ erro }}
+
                                 </div>
 
                                 <form #loginForm="ngForm" (ngSubmit)="onSubmit();">
                                     <div class="form-group">
                                         <label class="small mb-1">Login</label>
-                                        <input type="text" name="username" [(ngModel)]="username"
+                                        <input type="text" name="username" [(ngModel)]="username" autocomplete="off"
                                             class="form-control py-4" placeholder="Digite seu login" />
                                     </div>
                                     <div class="form-group">
@@ -39,16 +39,16 @@
                                     </div>
 
                                     <div class="form-group align-items-center justify-content-between mt-4 mb-4">
-                                        <button type="submit" class="btn btn-primary" *ngIf="!cadastrando">Enviar</button>
+                                        <button type="submit" class="btn btn-primary"
+                                            *ngIf="!cadastrando">Enviar</button>
 
-                                        <button type="button" class="btn btn-success" 
-                                        (click)="cadastrar()"
-                                        *ngIf="cadastrando">
+                                        <button type="button" class="btn btn-success" (click)="cadastrar()"
+                                            *ngIf="cadastrando">
                                             Cadastrar
                                         </button>
 
                                         <button type="button" class="btn btn-danger ml-1" *ngIf="cadastrando"
-                                        (click)="cancelaCadastro()">
+                                            (click)="cancelaCadastro()">
                                             Cancelar
                                         </button>
                                     </div>
