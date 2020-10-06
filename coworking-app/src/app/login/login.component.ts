@@ -23,8 +23,14 @@ export class LoginComponent {
   ) { }
 
   onSubmit() {
-    this.router.navigate(['/main']);
-    //console.log(`User: ${this.username}, Pass: ${this.password}`);
+    this.authorizeService
+      .tentarLogar(this.username, this.password)
+      .subscribe(response => {
+        console.log(response);
+        this.router.navigate(['/main']);
+      }, errorResponse => {
+        this.errors = ['Usuário e ou senha incorreto(s).'];
+      })
   }
 
   preparaCadastrar(event) {

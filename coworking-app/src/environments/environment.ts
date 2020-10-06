@@ -7,7 +7,7 @@ export const environment = {
   apiURL: 'http://localhost:8080',
   clientId: 'coworking-app',
   clientSecret: '@123456',
-  obterTokenUrl: '/ouath/token'
+  obterTokenUrl: '/oauth/token'
 
 };
 
