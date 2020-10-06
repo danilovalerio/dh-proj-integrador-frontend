@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://localhost:8080'
+  apiURL: 'http://localhost:8080',
+  clientId: 'coworking-app',
+  clientSecret: '@123456',
+  obterTokenUrl: '/ouath/token'
+
 };
 
 /*
