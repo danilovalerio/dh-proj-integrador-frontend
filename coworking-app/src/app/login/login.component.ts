@@ -27,6 +27,9 @@ export class LoginComponent {
       .tentarLogar(this.username, this.password)
       .subscribe(response => {
         console.log(response);
+        //para armazenar o token na session storage
+        const access_token = JSON.stringify(response);
+        localStorage.setItem('access_token', access_token);
         this.router.navigate(['/main']);
       }, errorResponse => {
         this.errors = ['Usuário e ou senha incorreto(s).'];
