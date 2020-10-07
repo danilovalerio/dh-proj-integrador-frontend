@@ -32,7 +32,7 @@ export class AuthorizeService {
       .set('grant_type', 'password');
 
     const headers = {
-      'Authorization': 'Basic Auth' + btoa(`${this.clientID}:${this.clientSecret}`),
+      'Authorization': 'Basic ' + btoa(`${this.clientID}:${this.clientSecret}`),
       'Content-Type': 'application/x-www-form-urlencoded'
     }
 
