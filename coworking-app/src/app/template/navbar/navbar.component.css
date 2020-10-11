@@ -1,12 +1,13 @@
 #navbar {
     overflow: hidden;
     background-color:white;
-    padding: 20px 10px;
+    padding: 2% 1%;
     transition: 0.4s;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99;
+    align-items: center;
   }
   
   .buttons {
@@ -29,11 +30,12 @@
 
   #link-logo {
       text-decoration: none;
+      position: relative;
+      align-items: center;
   }
   
-  #navbar #logo {
+  .logo {
     width: 170px;
-    transition: 0.4s;
   }
   
   #navbar .buttons:hover {
@@ -46,7 +48,7 @@
   }
 
   /* toggle */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 720px) {
     #navbar-right {display: none;}
     .menu-btn{
         position: relative;
@@ -57,13 +59,13 @@
         cursor: pointer;
         transition: all .5s ease-in-out;
         border: 3px solid #fff;
-        left: 80%;
+        left: 85%;
     }
     
     .menu-btn__burger {
         width: 50px;
         height: 6px;
-        background: greenyellow;
+        background: rgb(62, 148, 228);
         border-radius: 5px;
         box-shadow: 0px 2px 5px rgba(255,101,47,.2);
         transition: all .5s ease-in-out;
@@ -75,7 +77,7 @@
         position: absolute;
         width: 50px;
         height: 6px;
-        background: greenyellow;
+        background:rgb(62, 148, 228);
         border-radius: 5px;
         box-shadow: 0px 2px 5px rgba(255,101,47,.2);
         transition: all .5s ease-in-out;
@@ -112,4 +114,58 @@
       right: 0;
       top: 0;
     }
+  }
+
+  @media screen and (max-width:500px){
+    .menu-btn{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      border: 3px solid #fff;
+      left: 80%;
+    }
+  }
+
+  @media screen and (max-width: 336px){
+    .menu-btn{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      border: 3px solid #fff;
+      left: 0;
+      margin-bottom: -30px;
+    }
+    .logo{
+      margin-bottom: 30px;
+      margin-left: 15px;
+    }
+
+    .menu-btn__burger {
+      width: 40px;
+      height: 6px;
+      background: rgb(62, 148, 228);
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+  }
+  
+  .menu-btn__burger::before,
+  .menu-btn__burger::after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 6px;
+      background:rgb(62, 148, 228);
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+  }
   }

@@ -13,5 +13,12 @@
 @media screen and (max-width: 1000px){
     #left-of-image{
         text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #left-of-image{
+        font-size: 30px;
     }
 }
