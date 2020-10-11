@@ -19,6 +19,12 @@
     line-height: 25px;
     border-radius: 4px;
     font-weight: 600;
+    transition: 1s;
+  }
+
+  #green-button{
+    background-color: rgba(48, 141, 39, 0.89);
+    color: white;
   }
 
   #link-logo {
@@ -32,23 +38,78 @@
   
   #navbar .buttons:hover {
     background-color: #ddd;
-    color: black;
+    color: rgb(57, 180, 174);
   }
   
   #navbar-right {
     float: right;
   }
+
+  /* toggle */
+  @media screen and (max-width: 600px) {
+    #navbar-right {display: none;}
+    .menu-btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        border: 3px solid #fff;
+        left: 80%;
+    }
+    
+    .menu-btn__burger {
+        width: 50px;
+        height: 6px;
+        background: greenyellow;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before,
+    .menu-btn__burger::after{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: greenyellow;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before{
+        transform: translateY(-16px);
+    }
+    
+    .menu-btn__burger::after{
+        transform: translateY(16px);
+    }
+    
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger{
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .menu-btn.open .menu-btn__burger::before{
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    
+    .menu-btn.open .menu-btn__burger::after{
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
   
-  @media screen and (max-width: 580px) {
-    #navbar {
-      padding: 20px 10px !important;
-    }
-    #navbar a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    #navbar-right {
-      float: none;
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
