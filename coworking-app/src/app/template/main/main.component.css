@@ -15,7 +15,22 @@
 
 h1{
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-weight: 1000;
+}
+
+.lines{
+    background-color: rgb(62, 148, 228);
+    height: 5px;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 5px;
+    margin-left: 45%;
+}
+
+#after-image{
+    align-items: center;
+    position: relative;
+    text-align: center;
 }
 
 #body-icons{
@@ -33,6 +48,7 @@ h1{
 #text-body-icons>h2{
     margin-top: 10%;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 @media screen and (max-width: 1000px){
@@ -40,10 +56,44 @@ h1{
         text-align: center;
         width: 100%;
     }
+    #text-body-icons>h2{
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .lines{
+        background-color: rgb(62, 148, 228);
+        height: 5px;
+        cursor: pointer;
+        width: 80px;
+        border-radius: 5px;
+        margin-left: 40%;
+    }
+
+    .row{
+        align-items: center !important;
+    }
+
+    .context-body>img{
+        align-items: center;
+    }
+
 }
 
 @media screen and (max-width: 350px){
     #left-of-image{
         font-size: 30px;
+    }  
+}
+
+@media screen and (max-width: 720){
+    .minor{
+        margin-top: 50% !important;
+        background-color: none;
     }
 }
