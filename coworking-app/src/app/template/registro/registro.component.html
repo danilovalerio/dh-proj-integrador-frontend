@@ -1,20 +1,22 @@
-<div class="caixa-login">
-    <img src="../../../assets/imgaes/digital-house-logo.png">
-    <div class="forms"  >
-        <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
-            <input type="text" name="" placeholder="Nome">
-            <input type="text" name="" placeholder="E-mail">
-            <select>
-                <option value="default">Escolha o seu coworking</option>
-                <option value="coworking1">Coworking1</option>
-                <option value="coworking2">Coworking2</option>
-                <option value="coworking3">Coworking3</option>
-                <option value="coworking4">Coworking4</option>
-            </select>
-            <input type="password" name="" placeholder="Senha">
-            <input type="password" name="" placeholder="Confirmar senha">
-            <input type="submit" value="Registrar">
-        </form>
-        <a routerLink = "/login">Entrar</a>
+<div class="container">
+    <div class="caixa-login">
+        <img src="../../../assets/imgaes/digital-house-logo.png">
+        <div class="forms"  >
+            <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+                <input type="text" name="" placeholder="Nome">
+                <input type="text" name="" placeholder="E-mail">
+                <select>
+                    <option value="default">Escolha o seu coworking</option>
+                    <option value="coworking1">Coworking1</option>
+                    <option value="coworking2">Coworking2</option>
+                    <option value="coworking3">Coworking3</option>
+                    <option value="coworking4">Coworking4</option>
+                </select>
+                <input type="password" name="" placeholder="Senha">
+                <input type="password" name="" placeholder="Confirmar senha">
+                <input type="submit" value="Registrar">
+            </form>
+            <a routerLink = "/login">Entrar</a>
+        </div>
     </div>
 </div>

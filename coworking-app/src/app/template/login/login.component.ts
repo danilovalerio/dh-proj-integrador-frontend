@@ -34,6 +34,5 @@ export class LoginComponent {
         if (this.userPass.length <= 0 || this.userPass == undefined) {
             this.errors.push("Senha não pode ser vazia")
         }
-
     }
 }
