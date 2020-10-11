@@ -1,5 +1,17 @@
 .row{
     margin-top: 5% !important;
-    background-color: white;
+    background-color: none;
 }
 
+#left-of-image{
+    padding: 60px 10px;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+}
+
+@media screen and (max-width: 1000px){
+    #left-of-image{
+        text-align: center;
+    }
+}
