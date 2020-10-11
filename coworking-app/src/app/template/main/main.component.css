@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .row{
     margin-top: 5% !important;
     background-color: none;
@@ -8,6 +10,29 @@
     font-weight: 700;
     font-size: 40px;
     text-align: left;
+    margin-bottom: -50px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+#body-icons{
+    width: 400px;
+}
+
+#body-icon-1{
+    width: 300px;
+}
+
+#text-body-icons{
+    text-justify: distribute;
+    align-items: center;
+}
+#text-body-icons>h2{
+    margin-top: 10%;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1000px){
