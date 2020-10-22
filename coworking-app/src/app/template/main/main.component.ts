@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Sala } from 'src/app/sala';
-import { SalasService } from 'src/app/salas.service';
+import { Sala } from 'src/app/salas/sala';
+import { SalasService } from 'src/app/salas/salas.service';
 declare var jQuery: any;
 
 

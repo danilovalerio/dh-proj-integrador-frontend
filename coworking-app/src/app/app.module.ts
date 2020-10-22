@@ -10,13 +10,15 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthorizeService } from './authorize.service';
+import { SalasComponent } from './salas/salas.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SalasComponent
   ],
   imports: [
     BrowserModule,
