@@ -1,3 +1,4 @@
+import { SalasComponent } from './salas/salas.component';
 import { ForgotComponent } from './template/esqueci-minha-senha/esqueci-minha-senha.component';
 import { RegistroComponent } from './template/registro/registro.component';
 import { MainComponent } from './template/main/main.component';
@@ -8,12 +9,13 @@ import { LoginComponent } from './login/login.component';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 const routes: Routes = [
-  { path: 'main', component: MainComponent},
-  { path: '', redirectTo: 'main', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent},
-  { path: 'registro', component: RegistroComponent},
-  { path: 'esqueci-minha-senha', component: ForgotComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'main', component: MainComponent },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent },
+  { path: 'esqueci-minha-senha', component: ForgotComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'salas', component: SalasComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
