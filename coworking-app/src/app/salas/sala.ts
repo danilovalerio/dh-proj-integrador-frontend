@@ -11,4 +11,6 @@ export class Sala {
         this.limitePessoas = limitePessoas;
         this.foto = foto;
     }
+
+    
 }
